@@ -1,2 +1,0 @@
-# DasarPemrograman
-Ujian Tengah Semester
