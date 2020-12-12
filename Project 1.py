@@ -13,64 +13,75 @@ class color:
 
 
 print("-------------------------------")
-print("KASIR A")
+print("     Warung Makan Sejahtera      ")
+print("           KASIR A               ")
+print("      Nama kasir = Mba Ayu       ")
 print("-------------------------------")
+pelanggan = input("Nama Pelanggan : ")
+tanggal = input("Tanggal Pembelian : ")
 
-def daftar_barang():
+def daftar_menu():
     print(color.BLUE + " No | Nama Barang | Harga" + color.END)
     print(color.RED + "-------------------------------")
-    print(" 1  | Nasgor        | 10000")
-    print(" 2  | Geprek        | 12000")
-    print(" 3  | Nasi Padang   | 13000")
-    print(" 4  | Es Teh        | 2000")
-    print(" 5  | Teh hangat    | 1500")
-    print(" 6  | Es Jeruk      | 2000")
-    print(" 7  | Jeruk Hangat  | 1500")
+    print(" 1  | Nasi goreng   | 10000")
+    print(" 2  | Ayam Geprek   | 12000")
+    print(" 3  | Nasi rames    | 13000")
+    print(" 4  | Soto Ayam     | 10000")
+    print(" 5  | Es Teh        | 2000")
+    print(" 6  | Teh hangat    | 1500")
+    print(" 7  | Es Jeruk      | 2000")
+    print(" 8  | Jeruk Hangat  | 1500")
+
     print("-------------------------------" + color.END)
-    kode = int(input("Masukkan angka barang  : "))
+    kode = int(input("Angka pesanan : "))
     if kode == 1:
-        jumlah1 = int(input("Masukkan jumlah barang : "))
+        jumlah1 = int(input("jumlah pesanan : "))
         total1 = 10000 * jumlah1
         total.append(total1)
         tanya()
     elif kode == 2:
-        jumlah2 = int(input("Masukkan jumlah barang : "))
+        jumlah2 = int(input("jumlah pesanan : "))
         total2 = 12000 * jumlah2
         total.append(total2)
         tanya()
     elif kode == 3:
-        jumlah3 = int(input("Masukkan jumlah barang : "))
+        jumlah3 = int(input("jumlah pesanan : "))
         total3 = 13000 * jumlah3 
         total.append(total3)
         tanya()
     elif kode == 4:
-        jumlah4 = int(input("Masukkan jumlah barang : "))
-        total4 = 2000 * jumlah4
+        jumlah4 = int(input("jumlah pesanan : "))
+        total4 = 10000 * jumlah4 
         total.append(total4)
         tanya()
     elif kode == 5:
-        jumlah5 = int(input("Masukkan jumlah barang : "))
-        total5 = 1500 * jumlah5   
+        jumlah5 = int(input("jumlah pesanan : "))
+        total5 = 2000 * jumlah5
         total.append(total5)
         tanya()
     elif kode == 6:
-        jumlah4 = int(input("Masukkan jumlah barang : "))
-        total4 = 2000 * jumlah4
+        jumlah6 = int(input("jumlah pesanan : "))
+        total6 = 1500 * jumlah6   
         total.append(total6)
         tanya()
     elif kode == 7:
-        jumlah5 = int(input("Masukkan jumlah barang : "))
-        total5 = 1500 * jumlah5   
+        jumlah7 = int(input("jumlah pesanan : "))
+        total7 = 2000 * jumlah7
         total.append(total7)
+        tanya()
+    elif kode == 8:
+        jumlah8 = int(input("jumlah pesanan : "))
+        total8 = 1500 * jumlah8   
+        total.append(total8)
         tanya()
     return
 
 def tanya():
     print("\n-------------------------------")
-    tanya = input("Ingin tambah barang? [y/t] : ")
+    tanya = input("ingin menambah pesanan? [y/t] : ")
     print("-------------------------------")
     if tanya == "y":
-        daftar_barang()
+        daftar_menu()
     elif tanya == "t":
         akhir()
     else:
@@ -78,6 +89,7 @@ def tanya():
 
 def akhir():
     for harga in total:
+        print("customer :",pelanggan)
         print(color.RED + "SubTotal         : ", sum(total))
         diskon = 0
         a = sum(total)
@@ -90,5 +102,5 @@ def akhir():
         print("-------------------------------")
         print("          Terima Kasih         ")
         print("-------------------------------" + color.RED )
-
-daftar_barang()
+        
+daftar_menu()
